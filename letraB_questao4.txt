@@ -1,11 +1,2 @@
-Teclado: 110.0
-E-book Java: 47.5
-Streaming: 108.0
-
-Contas:
-
-Teclado: 100 + 10% = 110,0
-E-book: 50 − 5% = 47,5
-Streaming: 20 × 6 = 120, e como são 6 meses ou mais, −10% = 108,0
-
-O mecanismo é a ligação dinâmica (também chamada de late binding ou polimorfismo de subtipo). Mesmo com a variável p sendo do tipo Produto, a JVM olha, na hora de executar, qual é o objeto real e chama a versão dele de calcularPrecoFinal().
+Saída: Teclado: 110.0, E-book Java: 47.5 e Streaming: 108.0 (100 + 10%; 50 − 5%; 20 × 6 = 120 e menos 10%).
+Quem decide é a ligação dinâmica: mesmo a variável sendo do tipo Produto, na execução o Java olha o objeto real e chama o calcularPrecoFinal() dele.

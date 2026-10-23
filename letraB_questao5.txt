@@ -1,11 +1,3 @@
-Saída:
-
-B: Estoque insuficiente para Teclado. Disponível: 3
-C
-D
-
-    
-O “A” não aparece, porque a exceção estoura na linha de cima e o println("A") é pulado.
-O catch imprime o B com a mensagem.
-O finally roda sempre (C).
-Como a exceção foi tratada, o programa segue normalmente para o D.
+Saída: B: Estoque insuficiente para Teclado. Disponível: 3, depois C e depois D.
+O A não aparece porque a exceção é lançada antes do println(“A”).
+O catch imprime o B, o finally sempre executa (C) e, como a exceção foi tratada, o programa segue e imprime o D.

@@ -1,8 +1,7 @@
-1: new Produto(...) não compila porque Produto é abstrata, ela tem um método sem corpo, então o objeto ficaria “incompleto”.
-A vantagem é que o projeto não deixa criar um “produto genérico” que não existe na loja.
-Todo produto precisa ser físico, digital ou assinatura, e cada um é obrigado a dizer como calcula seu preço.
+1: Produto é abstrata e tem um método sem corpo (calcularPrecoFinal), então não dá pra criar um objeto dela, ficaria incompleto.
+Isso ajuda porque não existe “produto genérico” na loja: 
+todo produto precisa ser físico, digital ou assinatura, e cada um define o seu cálculo de preço.
 
 
-2: Funciona porque em tempo de execução, o objeto nunca é um Produto puro, e sim uma subclasse concreta que já implementou calcularPrecoFinal().
-O compilador garante isso: toda subclasse concreta tem que implementar o método.
-Então exibirResumo() chama a versão do objeto real.
+2: Funciona porque, na hora de executar, o objeto sempre é de uma subclasse concreta, que já implementou calcularPrecoFinal().
+Então o exibirResumo() chama a versão da subclasse.

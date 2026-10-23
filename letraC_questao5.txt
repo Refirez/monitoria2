@@ -1,7 +1,4 @@
-EstoqueInsuficienteException é verificada (herda de Exception), então o compilador obriga a tratar ou declarar com throws. 
-PagamentoRecusadoException é não verificada (herda de RuntimeException), então o compilador não cobra nada.
-
-Verificada: quando é uma situação previsível do dia a dia e quem chamou consegue fazer algo a respeito (avisar o cliente que só tem 3 no estoque, oferecer menos unidades).
-Você quer forçar o programador a pensar nisso.
-Não verificada: para erros de programação ou situações em que obrigar try/catch em todo lugar só poluiria o código (argumento inválido, null, estado impossível).
-É a mesma lógica do IllegalArgumentException do construtor de Produto.
+A EstoqueInsuficienteException é verificada (extends Exception), então o compilador exige try/catch ou throws.
+A PagamentoRecusadoException é não verificada (extends RuntimeException), então não exige.
+seria mais indicada a verificada quando quem chamou consegue resolver o problema, como avisar o cliente que só tem 3 no estoque.
+A não verificada serve pra erro de programação ou situação que não vale tratar em todo lugar, como argumento inválido.
