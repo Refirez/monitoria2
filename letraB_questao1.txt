@@ -1,0 +1,6 @@
+1º trecho: compila. Todo ClienteVip é um Cliente (é um cliente com um extra).
+Então uma referência do tipo Cliente pode guardar um objeto ClienteVip.
+
+
+2º trecho: não compila. Nem todo Cliente é um ClienteVip. Um cliente comum não tem o desconto,
+e a variável v prometeria algo que o objeto não tem. A relação “é um” só vale de baixo para cima na hierarquia.

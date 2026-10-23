@@ -1,9 +1,24 @@
 package classes;
 
 public class ClienteVip extends Cliente{
-    private double percentualDesconto = 0.10;
+    private double percentualDesconto;
 
-    public ClienteVip(double percentualDesconto,int pontosFidelidade, String endereco, String nome, String email, int cpf){
-        super(nome,email,cpf,endereco,pontosFidelidade);
+    public ClienteVip(String nome, String email,int cpf, 
+        String endereco, double percentualDesconto){
+        super(nome, email, cpf, endereco);
+        this.percentualDesconto = percentualDesconto;
+    }
+
+    public double getPercentualDesconto(){
+        return percentualDesconto;
+    }
+
+    public void setPercentualDesconto(double percentualDesconto){
+        this.percentualDesconto = percentualDesconto;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + "| VIP (" + Math.round(percentualDesconto * 100) + "%)";
     }
 }

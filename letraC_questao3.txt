@@ -1,0 +1,8 @@
+1:Porque só alguns produtos são entregues (o digital e a assinatura não). Além disso, Java só permite herdar de uma classe, e ProdutoFisico já herda de Produto.
+A interface funciona como uma “habilitação”: “este objeto sabe ser entregue”.
+Qualquer classe, de qualquer hierarquia, pode ter essa habilitação sem ser um tipo de produto.
+
+
+2: Duas diferenças:
+Uma classe pode implementar várias interfaces, mas estender só uma classe (abstrata ou não).
+Classe abstrata pode ter atributos de instância e construtor. Interface só tem constantes (public static final) e não tem construtor nem estado do objeto.

@@ -2,12 +2,12 @@ package classes;
 
 public class Cliente extends Pessoa{
     private String endereco;
-    private int pontosFidelidade = 0;
+    private int pontosFidelidade;
 
-    public Cliente(String endereco, int pontosFidelidade, String nome, int cpf, String email){
+    public Cliente(String endereco, String nome, int cpf, String email){
         super(nome, cpf, email);
         this.endereco = endereco;
-        this.pontosFidelidade = pontosFidelidade;
+        this.pontosFidelidade = 0;
     }
 
     public void adicionarPontos(int pontos){
@@ -20,10 +20,15 @@ public class Cliente extends Pessoa{
         }
     }
 
-    
+    public String getEndereco(){
+        return endereco;
+    }
 
-    @Override
-    public String toString(){
-        return "Endereco :" + endereco + "| Pontos de Fidelidade: " + pontosFidelidade;
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+
+    public int getPontosFidelidade(){
+        return pontosFidelidade;
     }
 }

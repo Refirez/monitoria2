@@ -1,0 +1,11 @@
+Não compila. p1 foi declarada como Produto, e Produto não tem calcularFrete.
+
+
+((Entregavel) p1).calcularFrete("60000-000");
+
+Retorna 15 + 2 × 0,8 = 16,6.
+
+Diferença:
+
+O tipo da referência (à esquerda, Produto p1) decide o que você pode chamar. O compilador só confere isso.
+O tipo do objeto (depois do new, ProdutoFisico) decide qual versão do método roda na execução.
